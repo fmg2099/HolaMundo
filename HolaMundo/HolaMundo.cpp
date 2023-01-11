@@ -11,6 +11,15 @@ int main(int argc, char** argv)
 	//limpiar el contenido del apuntador
 	memset(palabra, 0, 64);
 
+	strcpy_s(palabra, 64, "hola mundo hoy es martes");
+
+	palabra[15] = 0;
+
+	for (int i = 0; i < 64; i++)
+	{
+		printf("%i : %i  (%c) \n ", i, palabra[i], palabra[i]);
+	}
+
 	printf( palabra  );
 	return 0;
 }
